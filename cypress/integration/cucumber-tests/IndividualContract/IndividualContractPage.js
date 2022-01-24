@@ -13,11 +13,11 @@ const txt_ZIPcode = ":nth-child(14) > .input-container > .input";
 const lst_Country = ":nth-child(15) > .input-container > :nth-child(2) > .select > .select__control";
 const btn_Completeprofile = ".p-10 > .button";
 
-class Individual_Contract_Page {
+class IndividualContractPage {
     static visit() {
        cy.visit(URL);
     }
-    static clickIamanindividual(){
+    static clickIamAnIndividual(){
         cy.get(btn_Imanindividual).click();
         cy.get(btn_Next).click();
     }
@@ -55,4 +55,4 @@ class Individual_Contract_Page {
        cy.get(btn_Completeprofile).click();
     }
 }
-export default Individual_Contract_Page;
+export default IndividualContractPage;

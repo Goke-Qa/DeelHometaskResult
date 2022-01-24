@@ -1,5 +1,5 @@
 const URL = "https://app.deel.training/login";
-const btn_Signup = ".create-account > .anchor > .button > div";
+const btn_Signup = '[data-cy=Sign Up]';
 const btn_Contractor = ".pl-6 > .selector";
 const btn_Continue = ".w-100 > div";
 const txt_Fullname = ":nth-child(2) > .input-container > .input > input";
@@ -9,12 +9,12 @@ const txt_Confirmpassword = ":nth-child(5) > .input-container > .input > input";
 const inp_HowdidyouhearaboutDeel = ".select__value-container";
 const btn_CreateyourDeelaccount = "form > .button > div";
 
-class Signup_Page {
+class SignupPage {
   static visit() {
      cy.visit(URL);
   }
   static clickSignup(){
-    cy.get(btn_Signup).should('be.visible')
+    cy.contains('Sign Up').click({force: true})
   }
   static pickContractor() {
     cy.get(btn_Contractor).click();
@@ -23,20 +23,20 @@ class Signup_Page {
   static fillFullname() {
     cy.get(txt_Fullname).type("Olagoke Somotan");
   }
-  static fillEmailaddress(){
+  static fillEmailAddress(){
     cy.get(txt_Emailaddress).type("gokesomotan@gmail.com");
   }
   static fillPassword() {
     cy.get(txt_Password).type("Olagoke89!");
   }
-  static fillConfirmpassword() {
+  static fillConfirmPassword() {
     cy.get(txt_Confirmpassword).type("Olagoke89!");
   }
-  static pickHowaboutDeel() {
+  static pickHowAboutDeel() {
     cy.get(inp_HowdidyouhearaboutDeel).select('LinkedIn')
   }
-  static clickCreateDeelaccount() {
+  static clickCreateDeelAccount() {
     cy.get(btn_CreateyourDeelaccount).click();
   }
 }
-export default Signup_Page;
+export default SignupPage;

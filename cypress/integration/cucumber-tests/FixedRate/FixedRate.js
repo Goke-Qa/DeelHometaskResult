@@ -1,71 +1,71 @@
 import { Given, And, Then, } from "cypress-cucumber-preprocessor/steps";
-import login_Page from "../login/login_Page";
-import Fixed_RatePage from "./Fixed_RatePage";
+import LoginPage from "../login/LoginPage";
+import FixedRatePage from "./FixedRatePage";
 
 Given("I am logged into Deel", () => {
-    login_Page.visit();
+    LoginPage.visit();
     cy.url().should("include", "");
-    login_Page.fillEmailaddress();
-    login_Page.fillPassword();
-    login_Page.clickLogin();
-    login_Page.verifyLogin_succcessful();
+    LoginPage.fillEmailAddress();
+    LoginPage.fillPassword();
+    LoginPage.clickLogin();
+    LoginPage.verifyLoginSucccessful();
 });
 Then ("user click on create a contract", () => {
-   Fixed_RatePage.clickCreate_a_contract();
+   FixedRatePage.clickCreateAContract();
 });
 And ("select fixed rate", () => {
-    Fixed_RatePage.clickFixed_rate();
+    FixedRatePage.clickFixedRate();
 });
 Then ("input contract name", () => {
-    Fixed_RatePage.inputContract_name();
+    FixedRatePage.inputContractName();
 });
 And ("select country of tax residence", () => {
-    Fixed_RatePage.pickContractor_tax_residence();
+    FixedRatePage.pickContractorTaxResidence();
 });
 Then ("select state", () => {
-    Fixed_RatePage.input_State();
+    FixedRatePage.inputState();
 });
 And ("select job title", () => {
-    Fixed_RatePage.inputJob_title();
+    FixedRatePage.inputJobTitle();
 });   
 Then ("select seniority level", () => {
-    Fixed_RatePage.pickSeniority_level();
+    FixedRatePage.pickSeniorityLevel();
 });    
 And ("input scope of work", () => {
-    Fixed_RatePage.inputScope_of_work();
+    FixedRatePage.inputScopeOfWork();
 });
 Then ("click next to proceed to define payment screen", () => {
-    Fixed_RatePage.clickNext();
+    FixedRatePage.clickNext();
 });
 And ("select currency", () => {
-    Fixed_RatePage.pickCurrency();
+    FixedRatePage.pickCurrency();
 });    
 And ("input payment rate", () => {
-    Fixed_RatePage.inputPayment_rate();
+    FixedRatePage.inputPaymentRate();
 });   
 Then ("select payment frequency and invoicing", () => {
-    Fixed_RatePage.pickPayment_frequency();
-//    Fixed_RatePage.clickInvoicing();
+    FixedRatePage.pickPaymentFrequency();
+
 });  
 Then ("pick invoice cycle", () => {
-    Fixed_RatePage.pickInvoice_cycle_ends
-//    Fixed_RatePage.pickInvoice_cycle();
+    FixedRatePage.pickInvoiceCycleEnds
+
 }); 
 And ("pick payment due", () => {
-    Fixed_RatePage.pickPayment_due();
+    FixedRatePage.pickPaymentDue();
 });  
 Then ("click next to proceed to define first payment date screen", () => {
-    Fixed_RatePage.clickNext_2();
+    FixedRatePage.clickNext2();
 });
 And ("select first payment date", () => {
-    Fixed_RatePage.pickFirst_payment_date();
+    FixedRatePage.pickFirstPaymentDate();
 });
 Then ("click next button to proceed to add document screen", () => {
-    Fixed_RatePage.clickNext_3();
+    FixedRatePage.clickNext3();
 });
 And ("click next to proceed to contract compliance screen", () => {
-    Fixed_RatePage.clickNext_4();
+    FixedRatePage.clickNext4();
 });  
 Then ("user clicks on create contract button", () => {
-    //Fixed_RatePage.clickCreate_contract();
+ //   FixedRatePage.clickCreateContract();
 });

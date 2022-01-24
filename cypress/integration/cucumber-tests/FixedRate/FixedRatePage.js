@@ -22,38 +22,38 @@ const btn_Next_3 = ".submit-define-dates";
 const btn_Next_4 = ".contract-creation-footer > .mt-7";
 const btn_Create_contract = ".contract-creation-footer > .mt-7"
 
-class Fixed_RatePage {
+class FixedRatePage {
     static visit() {
        cy.visit(URL);
 }
-static clickCreate_a_contract(){
+static clickCreateAContract(){
     cy.contains('Create A Contract').click({force: true});
 }
-static clickFixed_rate(){
+static clickFixedRate(){
     cy.wait(5000)
     cy.contains('Fixed Rate').click({force: true});
 }
-static inputContract_name(){
+static inputContractName(){
     cy.get('input').first().type("Olagoke Contract")
 }
-static pickContractor_tax_residence(){
+static pickContractorTaxResidence(){
     cy.get(select_Contractor_tax_residence).click();
     cy.contains("United States").click({force: true});
 }
-static input_State(){
+static inputState(){
     cy.wait(5000)
     cy.get(select_State).click();
     cy.contains("Colorado").click({force: true});
 }
-static inputJob_title() {
+static inputJobTitle() {
     cy.get(txt_Job_title).click();
     cy.contains("QA Engineer").click({force: true});
 }
-static pickSeniority_level(){
+static pickSeniorityLevel(){
     cy.get(select_Seniority_level).click();
     cy.contains("Mid (Individual Contributor Level 2").click({force: true});
 }
-static inputScope_of_work(){
+static inputScopeOfWork(){
     cy.get(txt_Scope_of_work).type("QA Engineer");
 }
 static clickNext(){
@@ -63,38 +63,38 @@ static pickCurrency(){
     cy.get(select_Currency).click();
     cy.contains("GBP - British").click({force: true});
 }
-static inputPayment_rate(){
+static inputPaymentRate(){
     cy.get(txt_Payment_rate).type(1000);
 }
-static pickPayment_frequency(){
+static pickPaymentFrequency(){
     cy.get(select_Payment_frequency).click();
     cy.contains("Weekly").click({force: true});
 }
-static pickInvoice_cycle_ends(){
+static pickInvoiceCycleEnds(){
     cy.get(select_Invoice_cycle_ends).click();
     cy.contains("Friday").click({force: true});
 }
-static pickPayment_due(){
+static pickPaymentDue(){
     cy.get(select_Payment_due).click();
     cy.contains("5 Days later").click({force: true});
 }
-static clickNext_2(){
+static clickNext2(){
     cy.get(btn_Next_2).click();
 }
-static pickFirst_payment_date(){
+static pickFirstPaymentDate(){
     cy.get(select_First_payment_date).click();
     cy.contains("Feb 25th, 2022").click({force: true});
 }
-static clickNext_3(){
+static clickNext3(){
     cy.get(btn_Next_3).click();
 }
-static clickNext_4(){
+static clickNext4(){
     cy.get(btn_Next_4).click();
 }
-static clickCreate_contract(){
+static clickCreateContract(){
   //  cy.get(btn_Create_contract).click();
     }
 
 }
 
-export default Fixed_RatePage;
+export default FixedRatePage;

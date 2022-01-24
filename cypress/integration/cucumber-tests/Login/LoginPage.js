@@ -5,23 +5,22 @@ const btn_Login = '[data-cy=log in]';
 const btn_Logout = '[data-cy=button]';
 
 
-class login_Page {
+class LoginPage {
     static visit() {
        cy.visit(URL);
 }
-static fillEmailaddress(){
+static fillEmailAddress(){
     cy.get('input').first().type('gokesomotan@gmail.com');
 }
 static fillPassword(){
     cy.get('input').last().type("Olagoke89!")
 }
 static clickLogin(){
-  //  cy.get('log in').click({force: true});
     cy.contains('log in').click({force: true});
 }
-static verifyLogin_succcessful(){
+static verifyLoginSucccessful(){
     cy.get('button').should("be.visible");
 }
     }
 
-export default login_Page;
+export default LoginPage;

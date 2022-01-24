@@ -1,27 +1,27 @@
 import { Given, And, Then, When } from "cypress-cucumber-preprocessor/steps";
-import Signup_Page from "./Signup_Page";
+import SignupPage from "./SignupPage";
 
 Given("user launches Deel URL", () => {
-  Signup_Page.visit();
+  SignupPage.visit();
   cy.url().should("include", "");
 });
 
 Then("user clicks on sign up", () => {
-  Signup_Page.clickSignup();
+  SignupPage.clickSignup();
 });
 
 When("user selects as a contractor option", () => {
-  Signup_Page.pickContractor();
+  SignupPage.pickContractor();
 });
 
 And("user fills all necessary data", () => {
-  Signup_Page.fillFullname();
-  Signup_Page.fillEmailaddress();
-  Signup_Page.fillPassword();
-  Signup_Page.fillConfirmpassword();
-  Signup_Page.pickHowaboutDeel
+  SignupPage.fillFullname();
+  SignupPage.fillEmailAddress();
+  SignupPage.fillPassword();
+  SignupPage.fillConfirmPassword();
+  SignupPage.pickHowAboutDeel
  });
 
  Then("user clicks create your Deel account button", () => {
-  Signup_Page.clickCreateDeelaccount();
+  SignupPage.clickCreateDeelAccount();
  });

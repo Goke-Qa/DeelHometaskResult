@@ -1,22 +1,22 @@
 import { Given, And, Then, When } from "cypress-cucumber-preprocessor/steps";
-import login_Page from "./login_Page";
+import LoginPage from "./LoginPage";
 
 
 Given("user launches Deel URL", () => {
-    login_Page.visit();
+    LoginPage.visit();
     cy.url().should("include", "");
   });
   
   Then("user inputs valid login details", () => {
-    login_Page.fillEmailaddress();
-    login_Page.fillPassword();
+    LoginPage.fillEmailAddress();
+    LoginPage.fillPassword();
     });
   
   And("user clicks login button", () => {
-    login_Page.clickLogin();
+    LoginPage.clickLogin();
   });
   
   Then("confirm user has successfully login", () => {
-    login_Page.verifyLogin_succcessful();
+    LoginPage.verifyLoginSucccessful();
    });
   
