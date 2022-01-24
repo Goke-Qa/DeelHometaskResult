@@ -67,6 +67,6 @@ And ("click next to proceed to contract compliance screen", () => {
     FixedRatePage.clickNext4();
 });  
 Then ("user clicks on create contract button", () => {
-    Fixed_RatePage.clickCreateContract();
+    FixedRatePage.clickCreateContract();
 });
 
