@@ -92,7 +92,7 @@ static clickNext_4(){
     cy.get(btn_Next_4).click();
 }
 static clickCreate_contract(){
-  //  cy.get(btn_Create_contract).click();
+    cy.get(btn_Create_contract).click();
     }
 
 }
