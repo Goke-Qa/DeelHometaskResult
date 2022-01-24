@@ -91,10 +91,19 @@ static clickNext3(){
 static clickNext4(){
     cy.get(btn_Next_4).click();
 }
+<<<<<<< HEAD:cypress/integration/cucumber-tests/FixedRate/FixedRatePage.js
 static clickCreateContract(){
   //  cy.get(btn_Create_contract).click();
+=======
+static clickCreate_contract(){
+    cy.get(btn_Create_contract).click();
+>>>>>>> 59d7a42d1ba5d0eaa844398f71b27814095782cd:cypress/integration/cucumber-tests/FixedRate/Fixed_RatePage.js
     }
 
 }
 
+<<<<<<< HEAD:cypress/integration/cucumber-tests/FixedRate/FixedRatePage.js
 export default FixedRatePage;
+=======
+export default Fixed_RatePage;
+>>>>>>> 59d7a42d1ba5d0eaa844398f71b27814095782cd:cypress/integration/cucumber-tests/FixedRate/Fixed_RatePage.js

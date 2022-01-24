@@ -67,5 +67,10 @@ And ("click next to proceed to contract compliance screen", () => {
     FixedRatePage.clickNext4();
 });  
 Then ("user clicks on create contract button", () => {
+<<<<<<< HEAD:cypress/integration/cucumber-tests/FixedRate/FixedRate.js
  //   FixedRatePage.clickCreateContract();
 });
+=======
+    Fixed_RatePage.clickCreate_contract();
+});
+>>>>>>> 59d7a42d1ba5d0eaa844398f71b27814095782cd:cypress/integration/cucumber-tests/FixedRate/Fixed_Rate.js
